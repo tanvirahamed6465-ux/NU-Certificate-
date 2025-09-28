@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:100px;">
+  <h2>Certificate Verification</h2>
+  <input id="roll" type="text" placeholder="Enter Roll Number">
+  <button onclick="check()">Check</button>
+  <p id="msg"></p>
+
+  <script>
+    function check() {
+      let roll = document.getElementById("roll").value.trim();
+      let msg = document.getElementById("msg");
+
+      if (roll === "1000012369") {
+        msg.innerHTML = "✅ Certificate Found";
+        window.location.href = "1000012369.pdf"; 
+      } else {
+        msg.innerHTML = "❌ Certificate Not Found";
+      }
+    }
+  </script>
+</body>
+</html>
